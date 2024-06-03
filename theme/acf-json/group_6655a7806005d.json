@@ -1,11 +1,11 @@
 {
     "key": "group_6655a7806005d",
-    "title": "Movie fields",
+    "title": "Movie",
     "fields": [
         {
             "key": "field_6655a7808444f",
             "label": "titre",
-            "name": "movie-title",
+            "name": "title",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -25,7 +25,7 @@
         {
             "key": "field_6655a79284450",
             "label": "Poster du film",
-            "name": "movie-poster",
+            "name": "poster",
             "aria-label": "",
             "type": "image",
             "instructions": "",
@@ -50,7 +50,7 @@
         {
             "key": "field_6655a7b384451",
             "label": "contenu",
-            "name": "movie-content",
+            "name": "content",
             "aria-label": "",
             "type": "wysiwyg",
             "instructions": "",
@@ -73,7 +73,28 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "movie"
+                "value": "post"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "movies"
+            }
+        ],
+        [
+            {
+                "param": "taxonomy",
+                "operator": "==",
+                "value": "all"
+            }
+        ],
+        [
+            {
+                "param": "taxonomy",
+                "operator": "==",
+                "value": "all"
             }
         ]
     ],
@@ -85,18 +106,15 @@
     "hide_on_screen": [
         "permalink",
         "the_content",
-        "excerpt",
         "discussion",
         "comments",
         "revisions",
         "author",
-        "format",
         "page_attributes",
-        "tags",
         "send-trackbacks"
     ],
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1716889608
+    "modified": 1717448172
 }

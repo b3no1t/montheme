@@ -15,4 +15,15 @@
 
 $context = Timber::context();
 
+$post = $context['post'];
+
+// WP Query sur le CPT (custom post type)
+// et donc des a present accéssible dans la vue
+$context['movie_posts'] = Timber::get_posts([
+    'post_type' => 'movies'
+]);
+$context['sac_a_main_posts'] = Timber::get_posts([
+    'post_type' => 'sac-a-main'
+]);
+
 Timber::render('index.twig', $context);

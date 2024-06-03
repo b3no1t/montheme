@@ -10,10 +10,6 @@ $timber_post     = Timber::get_post();
 // Use the global query.
 $posts = Timber::get_posts();
 
-// Using the WP_Query argument format.
-$posts = Timber::get_posts([
-    'post_type' => 'movie'
-]);
 
 if ( post_password_required( $timber_post->ID ) ) {
 	Timber::render( 'single-password.twig', $context );
