@@ -1,0 +1,14 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+  {% include './partial/hero.twig' %}
+  <h2>{{ movie.title }}</h2>
+
+  <section class="posts__list">
+    {# On boucle sur posts pour récupérer les posts via la wp-query dans le .php #}
+    {% for post in posts %}
+      {% include ['tease-' ~ post.post_type ~ '.twig', 'tease.twig'] %}
+    {% endfor %}
+  </section>
+  {# {% include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %} #}
+{% endblock %}
