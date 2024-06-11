@@ -1,11 +1,11 @@
 {
-    "key": "group_6655a7806005d",
-    "title": "Movie",
+    "key": "group_6661a5c010e7e",
+    "title": "Comp. \/ CTA image",
     "fields": [
         {
-            "key": "field_6655a7808444f",
-            "label": "titre",
-            "name": "title",
+            "key": "field_6661a5c00b77d",
+            "label": "texte du cta",
+            "name": "cta_text",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -23,9 +23,26 @@
             "append": ""
         },
         {
-            "key": "field_6655a79284450",
-            "label": "Poster du film",
-            "name": "poster",
+            "key": "field_6661a6432f756",
+            "label": "cta link",
+            "name": "cta_link",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_6661a655ced7a",
+            "label": "image de fond",
+            "name": "image",
             "aria-label": "",
             "type": "image",
             "instructions": "",
@@ -36,7 +53,7 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "url",
+            "return_format": "id",
             "library": "all",
             "min_width": "",
             "min_height": "",
@@ -46,26 +63,6 @@
             "max_size": "",
             "mime_types": "",
             "preview_size": "medium"
-        },
-        {
-            "key": "field_6655a7b384451",
-            "label": "contenu",
-            "name": "content",
-            "aria-label": "",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
         }
     ],
     "location": [
@@ -73,7 +70,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "movies"
+                "value": "recette"
             }
         ]
     ],
@@ -83,17 +80,10 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": [
-        "permalink",
-        "the_content",
-        "discussion",
-        "comments",
-        "revisions",
-        "author",
-        "page_attributes",
-        "send-trackbacks"
+        "the_content"
     ],
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1718091665
+    "modified": 1717675791
 }

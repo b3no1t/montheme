@@ -1,28 +1,21 @@
 {% extends 'base.twig' %}
 
 {% block content %}
-  {% include './partial/hero.twig' %}
   <h2>{{ post.title }}</h2>
-
   <section class="posts__list">
+    {# On boucle sur posts pour récupérer les posts via la wp-query dans le .php #}
+    <h2 class="text-3xl">Recette</h2>
+
+    {% for item in recettes %}
+      <h2 class="text-2xl">{{ item.meta('title') }}</h2>
+      <hr />
+      <p class="text-xl">{{ item.meta('content') }}</p>
+      {{ item.meta('image') }}
+    {% endfor %}
+
     {# On boucle sur posts pour récupérer les posts via la wp-query dans le .php #}
     {% for post in posts %}
       {% include ['tease-' ~ post.post_type ~ '.twig', 'tease.twig'] %}
-    {% endfor %}
-    <hr />
-    {# On boucle sur posts pour récupérer les posts via la wp-query dans le .php #}
-    <h2 class="text-3xl">Movies</h2>
-    {% for movie in movie_posts %}
-      <h2 class="text-2xl">{{ movie.meta('title') }}</h2>
-      <p class="text-xl">{{ movie.meta('content') }}</p>
-      {{ movie.meta('poster') }}
-    {% endfor %}
-    <hr />
-    <h2 class="text-3xl">Sac à main</h2>
-    {% for bag in sac_a_main_posts %}
-      <h2 class="text-2xl">{{ bag.meta('title') }}</h2>
-      <p class="text-xl">{{ bag.meta('cta-text') }}</p>
-      {{ bag.meta('poster') }}
     {% endfor %}
     <hr />
   </section>

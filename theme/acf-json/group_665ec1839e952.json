@@ -1,10 +1,10 @@
 {
-    "key": "group_6655a7806005d",
-    "title": "Movie",
+    "key": "group_665ec1839e952",
+    "title": "Composant \/ Recette",
     "fields": [
         {
-            "key": "field_6655a7808444f",
-            "label": "titre",
+            "key": "field_665ec2f4c1a3c",
+            "label": "Titre",
             "name": "title",
             "aria-label": "",
             "type": "text",
@@ -23,9 +23,9 @@
             "append": ""
         },
         {
-            "key": "field_6655a79284450",
-            "label": "Poster du film",
-            "name": "poster",
+            "key": "field_665ec184c1a3b",
+            "label": "Image de recette",
+            "name": "image",
             "aria-label": "",
             "type": "image",
             "instructions": "",
@@ -36,7 +36,7 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "url",
+            "return_format": "id",
             "library": "all",
             "min_width": "",
             "min_height": "",
@@ -48,9 +48,9 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_6655a7b384451",
-            "label": "contenu",
-            "name": "content",
+            "key": "field_665ec487c1a3f",
+            "label": "ingredients",
+            "name": "ingredients",
             "aria-label": "",
             "type": "wysiwyg",
             "instructions": "",
@@ -66,6 +66,47 @@
             "toolbar": "full",
             "media_upload": 1,
             "delay": 0
+        },
+        {
+            "key": "field_665ec321c1a3d",
+            "label": "Auteur",
+            "name": "author",
+            "aria-label": "",
+            "type": "user",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "role": "",
+            "return_format": "id",
+            "multiple": 0,
+            "allow_null": 0,
+            "bidirectional": 0,
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_665ec410c1a3e",
+            "label": "Durée",
+            "name": "duration",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "de .. à ...",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -73,27 +114,27 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "movies"
+                "value": "recette"
             }
         ]
     ],
-    "menu_order": 0,
+    "menu_order": 1,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": [
-        "permalink",
         "the_content",
+        "excerpt",
         "discussion",
         "comments",
         "revisions",
         "author",
-        "page_attributes",
+        "categories",
         "send-trackbacks"
     ],
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1718091665
+    "modified": 1717674594
 }

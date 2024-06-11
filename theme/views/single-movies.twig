@@ -1,0 +1,10 @@
+{% extends 'base.movies.twig' %}
+
+{% block content %}
+  {% for item in movies %}
+    {# {% include './partial/hero.twig' %} #}
+    {{ item.meta('title') }}
+    {{ item.meta('content') }}
+    <img src="{{ item.meta('poster') }}" alt="c'est l'image du titanic" />
+  {% endfor %}
+{% endblock %}

@@ -1,10 +1,10 @@
 {
-    "key": "group_6655a7806005d",
-    "title": "Movie",
+    "key": "group_66619d373e4d0",
+    "title": "composant \/ presentation",
     "fields": [
         {
-            "key": "field_6655a7808444f",
-            "label": "titre",
+            "key": "field_66619e3ecc133",
+            "label": "Titre",
             "name": "title",
             "aria-label": "",
             "type": "text",
@@ -23,9 +23,9 @@
             "append": ""
         },
         {
-            "key": "field_6655a79284450",
-            "label": "Poster du film",
-            "name": "poster",
+            "key": "field_66619d3acc132",
+            "label": "photo",
+            "name": "photo",
             "aria-label": "",
             "type": "image",
             "instructions": "",
@@ -36,7 +36,7 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "url",
+            "return_format": "id",
             "library": "all",
             "min_width": "",
             "min_height": "",
@@ -48,7 +48,7 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_6655a7b384451",
+            "key": "field_66619e4fcc134",
             "label": "contenu",
             "name": "content",
             "aria-label": "",
@@ -73,7 +73,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "movies"
+                "value": "recette"
             }
         ]
     ],
@@ -83,17 +83,10 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": [
-        "permalink",
-        "the_content",
-        "discussion",
-        "comments",
-        "revisions",
-        "author",
-        "page_attributes",
-        "send-trackbacks"
+        "the_content"
     ],
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1718091665
+    "modified": 1717673843
 }

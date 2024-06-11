@@ -1,9 +1,9 @@
 {
-    "key": "group_6655a7806005d",
-    "title": "Movie",
+    "key": "group_6668014bbefe7",
+    "title": "poisson champs",
     "fields": [
         {
-            "key": "field_6655a7808444f",
+            "key": "field_6668014cba3e0",
             "label": "titre",
             "name": "title",
             "aria-label": "",
@@ -23,9 +23,29 @@
             "append": ""
         },
         {
-            "key": "field_6655a79284450",
-            "label": "Poster du film",
-            "name": "poster",
+            "key": "field_6668015bba3e1",
+            "label": "nom du poisson",
+            "name": "nom_du_poisson",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_66680167ba3e2",
+            "label": "photo du poisson",
+            "name": "photo_du_poisson",
             "aria-label": "",
             "type": "image",
             "instructions": "",
@@ -48,11 +68,11 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_6655a7b384451",
-            "label": "contenu",
+            "key": "field_6668018cba3e3",
+            "label": "Contenu",
             "name": "content",
             "aria-label": "",
-            "type": "wysiwyg",
+            "type": "textarea",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -62,10 +82,10 @@
                 "id": ""
             },
             "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
+            "maxlength": "",
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
         }
     ],
     "location": [
@@ -73,7 +93,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "movies"
+                "value": "poisson"
             }
         ]
     ],
@@ -83,17 +103,10 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": [
-        "permalink",
-        "the_content",
-        "discussion",
-        "comments",
-        "revisions",
-        "author",
-        "page_attributes",
-        "send-trackbacks"
+        "the_content"
     ],
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1718091665
+    "modified": 1718093894
 }

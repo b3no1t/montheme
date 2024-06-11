@@ -10,6 +10,25 @@ $timber_post     = Timber::get_post();
 // Use the global query.
 $posts = Timber::get_posts();
 
+// Query recettes
+$context['recettes'] = Timber::get_posts([
+    'post_type' => 'recette'
+]);
+// Query worpdress
+$context['sacs'] = Timber::get_posts([
+    'post_type' => 'sac-a-main'
+]);
+// Query worpdress
+$context['movies'] = Timber::get_posts([
+    'post_type' => 'movies'
+]);
+// Requete worpdress sur le POST TYPE poisson
+$context['poissons'] = Timber::get_posts([
+    'post_type' => 'poisson'
+]);
+
+
+
 
 if ( post_password_required( $timber_post->ID ) ) {
 	Timber::render( 'single-password.twig', $context );

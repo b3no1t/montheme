@@ -1,0 +1,26 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+  <div class="flex wrapper">
+    {% for item in sacs %}
+      <div class="container bg-slate-400 max-w-[350px] m-4 p-4">
+        <H2 class="my-4 text-3xl font-bold">{{ item.meta('title') }}</H2>
+
+        <div class="desc">{{ item.meta('description') }}</div>
+        <ul>
+          <li>
+            <img src="{{ item.meta('image') }}" alt="" />
+          </li>
+          <li>
+            <img src="{{ item.meta('image2') }}" alt="" />
+          </li>
+          <li>
+            <img src="{{ item.meta('image3') }}" alt="" />
+          </li>
+        </ul>
+        <a href="{{ item.meta('cta-link') }}">{{ item.meta('cta-text') }}</a>
+      </div>
+    {% endfor %}
+    {# /container #}
+  </div>
+{% endblock %}
