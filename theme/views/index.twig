@@ -1,23 +1,32 @@
 {% extends 'base.twig' %}
-
 {% block content %}
-  <h2>{{ post.title }}</h2>
-  <section class="posts__list">
-    {# On boucle sur posts pour récupérer les posts via la wp-query dans le .php #}
-    <h2 class="text-3xl">Recette</h2>
+  {#
+  c'est la page d'accueil
+ #}
+  <div class="wrapper">
+    <div class="container">
+      <nav></nav>
+      <main>
+        <ul>
+          {% for item in tortues %}
+            <a href="">
+              <li class="item">
+                <div class="container__item">
+                  <div class="container__img">
+                    <img src="{{ item.meta('title').src }}" alt="" />
+                  </div>
 
-    {% for item in recettes %}
-      <h2 class="text-2xl">{{ item.meta('title') }}</h2>
-      <hr />
-      <p class="text-xl">{{ item.meta('content') }}</p>
-      {{ item.meta('image') }}
-    {% endfor %}
-
-    {# On boucle sur posts pour récupérer les posts via la wp-query dans le .php #}
-    {% for post in posts %}
-      {% include ['tease-' ~ post.post_type ~ '.twig', 'tease.twig'] %}
-    {% endfor %}
-    <hr />
-  </section>
-  {# {% include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %} #}
+                  <div class="container__content">
+                    <h2>{{ item.meta('title') }}</h2>
+                    <time>{{ item.meta('date') }}</time>
+                    <p class="description">{{ item.meta('description') }}</p>
+                  </div>
+                </div>
+              </li>
+            </a>
+          {% endfor %}
+        </ul>
+      </main>
+    </div>
+  </div>
 {% endblock %}

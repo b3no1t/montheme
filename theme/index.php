@@ -21,5 +21,11 @@ $context['post'] = Timber::get_posts([
     'post_type' => 'recette'
 ]);
 
+$context['tortues'] = Timber::get_posts([
+    'post_type' => 'tortue'
+]);
+
+
+
 //rendu de la page
 Timber::render('index.twig', $context);
