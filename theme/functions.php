@@ -21,6 +21,19 @@ class Timberland extends Timber\Site {
 		add_action( 'acf/init', array( $this, 'acf_register_blocks' ) );
 		add_action( 'enqueue_block_editor_assets', array( $this, 'enqueue_assets' ) );
 
+        // begin: NAVIGATION
+        /**
+         * Register Menus
+         */
+        add_action('after_setup_theme', function () {
+            register_nav_menus([
+                'menu_primary' => 'Primary Menu',
+                'footer' => 'Footer Menu'
+            ]);
+        });
+        // end: navigation
+
+
 		parent::__construct();
 	}
 
@@ -73,7 +86,7 @@ class Timberland extends Timber\Site {
 		$dist_uri  = get_template_directory_uri() . '/assets/dist';
 		$dist_path = get_template_directory() . '/assets/dist';
 		$manifest  = null;
-		
+
 		if ( file_exists( $dist_path . '/.vite/manifest.json' ) ) {
 			$manifest = json_decode( file_get_contents( $dist_path . '/.vite/manifest.json' ), true );
 		}

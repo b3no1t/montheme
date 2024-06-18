@@ -15,7 +15,6 @@
                   <div class="container__img">
                     <img src="{{ item.meta('title').src }}" alt="" />
                   </div>
-
                   <div class="container__content">
                     <h2>{{ item.meta('title') }}</h2>
                     <time>{{ item.meta('date') }}</time>
@@ -24,6 +23,20 @@
                 </div>
               </li>
             </a>
+          {% endfor %}
+        </ul>
+        {# BOUCLER SUR MUSIC #}
+        <ul>
+          {% for item in musics %}
+            {# {% set image = get_image(cover) %} #}
+            <li>{{ item.meta('title') }}</li>
+            <li>{{ item.meta('auteur') }}</li>
+            <li>{{ item.meta('duration') }}</li>
+            <li>{{ item.meta('label') }}</li>
+            <li>{{ item.meta('featuring') }}</li>
+            <li>
+              <img src="{{ get_image(item.cover).src }}" alt="{{ image.alt }}" />
+            </li>
           {% endfor %}
         </ul>
       </main>

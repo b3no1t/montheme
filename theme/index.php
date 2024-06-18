@@ -25,7 +25,15 @@ $context['tortues'] = Timber::get_posts([
     'post_type' => 'tortue'
 ]);
 
+$context['poissons'] = Timber::get_posts([
+    'post_type' => 'poisson'
+]);
 
+$context['musics'] = Timber::get_posts([
+    'post_type' => 'music'
+]);
+
+$menu = Timber::get_menu('menu_primary');
 
 //rendu de la page
 Timber::render('index.twig', $context);
