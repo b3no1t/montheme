@@ -1,45 +1,65 @@
 {% extends 'base.twig' %}
 {% block content %}
-  {#
-  c'est la page d'accueil
- #}
+  {# NAVIGATION #}
   <div class="wrapper">
-    <div class="container">
-      <nav></nav>
-      <main>
-        <ul>
-          {% for item in tortues %}
-            <a href="">
-              <li class="item">
-                <div class="container__item">
-                  <div class="container__img">
-                    <img src="{{ item.meta('title').src }}" alt="" />
-                  </div>
-                  <div class="container__content">
-                    <h2>{{ item.meta('title') }}</h2>
-                    <time>{{ item.meta('date') }}</time>
-                    <p class="description">{{ item.meta('description') }}</p>
-                  </div>
-                </div>
-              </li>
-            </a>
-          {% endfor %}
-        </ul>
-        {# BOUCLER SUR MUSIC #}
-        <ul>
-          {% for item in musics %}
-            {# {% set image = get_image(cover) %} #}
-            <li>{{ item.meta('title') }}</li>
-            <li>{{ item.meta('auteur') }}</li>
-            <li>{{ item.meta('duration') }}</li>
-            <li>{{ item.meta('label') }}</li>
-            <li>{{ item.meta('featuring') }}</li>
-            <li>
-              <img src="{{ get_image(item.cover).src }}" alt="{{ image.alt }}" />
-            </li>
-          {% endfor %}
-        </ul>
-      </main>
+    <div class="container" style="background-image: url( {{ musics.hero_image }} );">
+      <nav class="fixed navigation">
+        {% include './menu.twig' %}
+      </nav>
+      <div class="hero">
+        <h2><a href="{{ musics.hero_cta_link }}" title="{{ musics.hero_cta_text }}">{{ musics.hero_cta_text }}</a></h2>
+      </div>
     </div>
   </div>
+
+  <main>
+    <div class="wrapper">
+      <div class="container">
+        <article>
+          <header>
+            <h1>{{ musics.title }}</h1>
+          </header>
+          {% if 'musics' in post.link %}
+            <section class="musics">
+              <ul>
+                {% for item in musics %}
+                  {# {% set image = get_image(cover) %} #}
+                  <li>{{ item.meta('title') }}</li>
+                  <li>{{ item.meta('auteur') }}</li>
+                  <li>{{ item.meta('duration') }}</li>
+                  <li>{{ item.meta('label') }}</li>
+                  <li>{{ item.meta('featuring') }}</li>
+                  <li>
+                    <img src="{{ get_image(item.cover).src }}" alt="{{ image.alt }}" />
+                  </li>
+                {% endfor %}
+              </ul>
+            </section>
+          {% endif %}
+        </article>
+      </div>
+    </div>
+
+    {% if 'tortues' in post.link %}
+      <ul>
+        {% for item in tortues %}
+          <a href="">
+            <li class="item">
+              <div class="container__item">
+                <div class="container__img">
+                  <img src="{{ item.meta('title').src }}" alt="" />
+                </div>
+                <div class="container__content">
+                  <h2>{{ item.meta('title') }}</h2>
+                  <time>{{ item.meta('date') }}</time>
+                  <p class="description">{{ item.meta('description') }}</p>
+                </div>
+              </div>
+            </li>
+          </a>
+        {% endfor %}
+      </ul>
+    {% endif %}
+    {# BOUCLER SUR MUSIC #}
+  </main>
 {% endblock %}

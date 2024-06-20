@@ -40,6 +40,9 @@ class Timberland extends Timber\Site {
 	public function add_to_context( $context ) {
 		$context['site'] = $this;
 		$context['menu'] = Timber::get_menu();
+       //add
+        $context['menu'] = Timber::get_menu('primary_nav');
+        $context['footer'] = Timber::get_menu('footer');
 
 		// Require block functions files
 		foreach ( glob( __DIR__ . '/blocks/*/functions.php' ) as $file ) {

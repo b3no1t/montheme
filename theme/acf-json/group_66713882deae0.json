@@ -186,6 +186,23 @@
             "toolbar": "full",
             "media_upload": 1,
             "delay": 0
+        },
+        {
+            "key": "field_6673ee973c12d",
+            "label": "Video",
+            "name": "video",
+            "aria-label": "",
+            "type": "oembed",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "width": "",
+            "height": ""
         }
     ],
     "location": [
@@ -208,5 +225,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1718696851
+    "modified": 1718873771
 }

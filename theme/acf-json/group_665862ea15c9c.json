@@ -92,7 +92,7 @@
             "label": "hero-cta-link",
             "name": "hero_cta_link",
             "aria-label": "",
-            "type": "url",
+            "type": "link",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -101,16 +101,15 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": ""
+            "return_format": "url"
         }
     ],
     "location": [
         [
             {
-                "param": "page_type",
+                "param": "page",
                 "operator": "==",
-                "value": "front_page"
+                "value": "44"
             }
         ]
     ],
@@ -119,9 +118,13 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": "",
+    "hide_on_screen": [
+        "the_content",
+        "comments",
+        "send-trackbacks"
+    ],
     "active": true,
     "description": "",
     "show_in_rest": 1,
-    "modified": 1717449507
+    "modified": 1718872477
 }

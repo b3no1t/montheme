@@ -1,9 +1,7 @@
 <ul>
-  {% for item in menu_primary %}
+  {% for item in menu.items %}
     <li class="{{ item.classes|join(' ') }}">
       <a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
     </li>
   {% endfor %}
 </ul>
-
-<h1>titi</h1>

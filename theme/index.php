@@ -33,7 +33,8 @@ $context['musics'] = Timber::get_posts([
     'post_type' => 'music'
 ]);
 
-$menu = Timber::get_menu('menu_primary');
+
+$context['menu'] = Timber::get_menu('menu_primary');
 
 //rendu de la page
 Timber::render('index.twig', $context);
