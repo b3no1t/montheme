@@ -1,41 +1,47 @@
 {% extends 'base.twig' %}
 {% block content %}
-  {# NAVIGATION #}
-  <div class="wrapper">
-    <div class="container" style="background-image: url( {{ musics.hero_image }} );">
-      <nav class="fixed navigation">
+  {# HERO + NAVIGATION #}
+  <div class="h-20 wrapper bg-slate-50">
+    {% set image = get_image(post.hero_image) %}
+    <div class="container" style="background-image: ulr( {{ image.src }} )">
+      <nav class="fixed w-full h-20 navigation bg-slate-400">
         {% include './menu.twig' %}
       </nav>
       <div class="hero">
-        <h2><a href="{{ musics.hero_cta_link }}" title="{{ musics.hero_cta_text }}">{{ musics.hero_cta_text }}</a></h2>
+        <h2><a href="{{ post.hero_cta_link }}" title="{{ post.hero_cta_text }}">{{ post.hero_cta_text }}</a></h2>
       </div>
     </div>
   </div>
-
   <main>
-    <div class="wrapper">
-      <div class="container">
+    <div class="wrapper bg-slate-200">
+      <div class="container w-[960px] mx-auto">
         <article>
           <header>
             <h1>{{ musics.title }}</h1>
           </header>
-          {% if 'musics' in post.link %}
-            <section class="musics">
-              <ul>
-                {% for item in musics %}
-                  {# {% set image = get_image(cover) %} #}
-                  <li>{{ item.meta('title') }}</li>
-                  <li>{{ item.meta('auteur') }}</li>
-                  <li>{{ item.meta('duration') }}</li>
-                  <li>{{ item.meta('label') }}</li>
-                  <li>{{ item.meta('featuring') }}</li>
-                  <li>
-                    <img src="{{ get_image(item.cover).src }}" alt="{{ image.alt }}" />
-                  </li>
-                {% endfor %}
-              </ul>
-            </section>
-          {% endif %}
+
+          {# {% if 'musics' in post.link %} #}
+          <section class="mx-auto musics">
+            <h2 class="text-2xl text-pretty">Musiques</h2>
+            <ul class="flex">
+              {% for item in musics %}
+                {# {% set image = get_image(cover) %} #}
+                <li class="w-1/2">
+                  {{ item.meta('auteur') }}
+                  <ul class="pt-2">
+                    <li>{{ item.meta('title') }}</li>
+                    <li>{{ item.meta('duration') }}</li>
+                    <li>{{ item.meta('label') }}</li>
+                    <li>{{ item.meta('featuring') }}</li>
+                    <li>
+                      <img src="{{ get_image(item.cover).src }}" alt="{{ image.alt }}" />
+                    </li>
+                  </ul>
+                </li>
+              {% endfor %}
+            </ul>
+          </section>
+          {# {% endif %} #}
         </article>
       </div>
     </div>
