@@ -23,12 +23,12 @@ class Timberland extends Timber\Site {
 
         // begin: NAVIGATION
         /**
-         * Register Menus
+         * Register/Enregister Menus
          */
         add_action('after_setup_theme', function () {
             register_nav_menus([
                 'menu_primary' => 'Primary Menu',
-                'footer' => 'Footer Menu'
+                'menu_footer' => 'Footer Menu'
             ]);
         });
         // end: navigation
