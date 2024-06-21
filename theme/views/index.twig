@@ -1,5 +1,6 @@
 {% extends 'base.twig' %}
-{% block content %}
+
+{% block hero %}
   {# HERO + NAVIGATION #}
   <div class="h-20 wrapper bg-slate-50">
     {% set image = get_image(post.hero_image) %}
@@ -12,6 +13,9 @@
       </div>
     </div>
   </div>
+{% endblock %}
+
+{% block content %}
   <main>
     <div class="wrapper bg-slate-200">
       <div class="container w-[960px] mx-auto">
@@ -22,19 +26,23 @@
 
           {# {% if 'musics' in post.link %} #}
           <section class="mx-auto musics">
-            <h2 class="text-2xl text-pretty">Musiques</h2>
+            <h2 class="text-2xl">Musiques</h2>
             <ul class="flex">
               {% for item in musics %}
                 {# {% set image = get_image(cover) %} #}
                 <li class="w-1/2">
-                  {{ item.meta('auteur') }}
+                  <a href="{{ item.link }}">{{ item.meta('auteur') }}</a>
+
                   <ul class="pt-2">
                     <li>{{ item.meta('title') }}</li>
                     <li>{{ item.meta('duration') }}</li>
                     <li>{{ item.meta('label') }}</li>
                     <li>{{ item.meta('featuring') }}</li>
                     <li>
-                      <img src="{{ get_image(item.cover).src }}" alt="{{ image.alt }}" />
+                      <img src="{{ get_image(item.cover).src }}" />
+                    </li>
+                    <li>
+                      <div class="mt-4 overflow-hidden">{{ item.meta('video') }}</div>
                     </li>
                   </ul>
                 </li>

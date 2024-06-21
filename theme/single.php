@@ -26,6 +26,9 @@ $context['movies'] = Timber::get_posts([
 $context['poissons'] = Timber::get_posts([
     'post_type' => 'poisson'
 ]);
+$context['post'] = Timber::get_posts([
+    'post_type' => 'music'
+]);
 
 
 

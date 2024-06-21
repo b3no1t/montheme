@@ -156,7 +156,7 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "url",
+            "return_format": "id",
             "library": "all",
             "min_width": "",
             "min_height": "",
@@ -193,7 +193,7 @@
             "name": "video",
             "aria-label": "",
             "type": "oembed",
-            "instructions": "",
+            "instructions": "Paste youtube url",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -225,5 +225,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1718873771
+    "modified": 1718893372
 }

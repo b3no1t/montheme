@@ -1,7 +1,7 @@
 <ul class="flex flex-row items-center justify-center h-full">
   {% for item in menu.items %}
     <li class="{{ item.classes|join(' ') }} px-4">
-      <a target="{{ item.target }}" href="{{ item.link }}" class="text-white">{{ item.title }}</a>
+      <a target="{{ item.target }}" href="{{ item.link }}" class="text-slate-900">{{ item.title }}</a>
     </li>
   {% endfor %}
 </ul>
