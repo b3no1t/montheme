@@ -16,12 +16,16 @@
   </head>
 
   <body class="{{ body_class }}" data-template="base.twig">
-    {% include 'menu.twig' %}
+    <div class="wrapper">
+      <div class="container mx-auto">
+        {% include 'menu.twig' %}
+      </div>
+    </div>
+    <main>
+      {% block content %}
 
-    {% block content %}
-      pas de contenu
-    {% endblock %}
-
+      {% endblock %}
+    </main>
     {% block footer %}
       {% include 'footer.twig' %}
       {{ function('wp_footer') }}

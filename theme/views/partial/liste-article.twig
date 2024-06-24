@@ -1,9 +1,11 @@
 <li class="article__list-item">
-  <div class="card">
-    <img src="{{ get_image(item.meta('cover')).src }}" alt="Avatar" style="width:250px" />
-    <div class="card__container">
-      <h4><b>{{ item.title }}</b></h4>
-      <p>{{ item.content }}</p>
+  <a href="{{ item.link }}" title="{{ item.title }}">
+    <div class="card">
+      <img src="{{ get_image(item.meta('cover')).src }}" alt="Avatar" style="width:250px" />
+      <div class="card__container">
+        <h4><b>{{ item.title }}</b></h4>
+        <p>{{ item.content }}</p>
+      </div>
     </div>
-  </div>
+  </a>
 </li>

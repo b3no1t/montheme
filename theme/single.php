@@ -26,12 +26,11 @@ $context['movies'] = Timber::get_posts([
 $context['poissons'] = Timber::get_posts([
     'post_type' => 'poisson'
 ]);
-$context['post'] = Timber::get_posts([
+$context['music'] = Timber::get_posts([
     'post_type' => 'music'
 ]);
 
-
-
+$context['menu'] = Timber::get_menu('menu_primary');
 
 if ( post_password_required( $timber_post->ID ) ) {
 	Timber::render( 'single-password.twig', $context );

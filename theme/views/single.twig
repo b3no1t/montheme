@@ -1,9 +1,9 @@
 {% extends 'base.twig' %}
 {% block hero %}
-  hero
+  {% include './partial/hero.twig' %}
 {% endblock %}
 {% block content %}
-  content<article class="article post-type-{{ post.type }}" id="post-{{ post.ID }}">
+  <article class="article post-type-{{ post.type }}" id="post-{{ post.ID }}">
     <section class="article-content">
       <h1 class="article-h1">{{ post.title }}</h1>
       <h2 class="article-h2">{{ post.meta('subtitle') }}</h2>

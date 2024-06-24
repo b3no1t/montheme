@@ -25,7 +25,7 @@
         {
             "key": "field_665ec184c1a3b",
             "label": "Image de recette",
-            "name": "image",
+            "name": "cover",
             "aria-label": "",
             "type": "image",
             "instructions": "",
@@ -136,5 +136,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1717674594
+    "modified": 1719236090
 }
