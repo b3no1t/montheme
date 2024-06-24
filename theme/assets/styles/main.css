@@ -3,10 +3,12 @@
 @import "theme";
 @import "tailwindcss/utilities";
 
-body.admin-bar {
+/* body.admin-bar {
     max-height: calc(100vh - 32px);
+} */
+.article__list{
+  @apply flex gap-2;
 }
-.container{
-@apply text-center;
-
-}
+  .article__list-item{
+    @apply bg-slate-300
+  }

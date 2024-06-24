@@ -17,7 +17,7 @@ $context = Timber::context();
 
 // WP Query sur le CPT (custom post type)
 // et donc des a present accéssible dans la vue
-$context['post'] = Timber::get_posts([
+$context['recette'] = Timber::get_posts([
     'post_type' => 'recette'
 ]);
 
@@ -34,7 +34,8 @@ $context['musics'] = Timber::get_posts([
 ]);
 
 
+
 $context['menu'] = Timber::get_menu('menu_primary');
 
 //rendu de la page
-Timber::render('index.twig', $context);
+Timber::render('front-page.twig', $context);

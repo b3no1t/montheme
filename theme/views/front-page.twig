@@ -1,17 +1,22 @@
 {% extends 'base.twig' %}
 
 {% block content %}
-  {# ! START: HERO partial/hero-front-page.twig #}
   {% include './partial/hero-front-page.twig' %}
-  {# ! END: HERO #}
 
-  {# ! START: liste d'article #}
-  {% include './partial/liste-article.twig' %}
-  {# ! END: liste d'article #}
+  <div class="wrapper">
+    <div class="container px-12 mt-4">
+      <h2>Liste des articles au sujet de la musique</h2>
+      <ul class="article__list">
+        {% for item in musics %}
+          {% include './partial/liste-article.twig' %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
 {% endblock %}
 
 {% block footer %}
   {# !START: FOOTER #}
-  {% include './partial/footer-front.twig' %}
+  {% include './footer.twig' %}
   {# !END: FOOTER #}
 {% endblock %}
