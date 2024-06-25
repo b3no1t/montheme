@@ -1,16 +1,18 @@
 {% extends 'base.twig' %}
 {% block hero %}
-  {% include './partial/hero-movie.twig' %}
+  {# {% include './partial/hero-movie.twig' %} #}
 {% endblock %}
+
 {% block content %}
-  <article class="article post-type-{{ post.type }}" id="post-{{ post.ID }}">
+  <article class="article-{{ post.ID }} post-type-{{ post.type }}" id="post-{{ post.ID }}">
     <section class="container mx-auto article-content">
       <img src="{{ get_image(post.cover).src }}" alt="alt" class="rounded-full w-52" />
+
       <h1 class="article-h1">{{ post.title }}</h1>
-      <h2 class="article-h2">{{ post.meta('subtitle') }}</h2>
+      {# <h2 class="article-h2">{{ post.meta('subtitle') }}</h2> #}
 
       <div class="flex">{{ post.video }}</div>
-      {{ post.content }}
+      <p>{{ post.content }}</p>
     </section>
     <section>
       <p class="article-author">

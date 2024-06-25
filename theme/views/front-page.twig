@@ -6,18 +6,8 @@
   <div class="my-16 wrapper">
     <div class="container px-12 mx-auto mt-4">
       <h2>Liste des articles au sujet de la musique</h2>
-      <ul class="article__list">
+      <ul class="flex flex-row flex-wrap article__list">
         {% for item in musics %}
-          {% include './partial/liste-article.twig' %}
-        {% endfor %}
-      </ul>
-    </div>
-  </div>
-  <div class="my-16 wrapper">
-    <div class="container px-12 mx-auto mt-4">
-      <h2>Liste des articles au sujet de recettes de cuisine</h2>
-      <ul class="article__list">
-        {% for item in recette %}
           {% include './partial/liste-article.twig' %}
         {% endfor %}
       </ul>

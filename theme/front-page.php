@@ -34,7 +34,6 @@ $context['musics'] = Timber::get_posts([
 ]);
 
 
-
 $context['menu'] = Timber::get_menu('menu_primary');
 
 //rendu de la page
