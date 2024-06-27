@@ -19,8 +19,17 @@ body {
   @apply prose prose-lg max-w-none;
 }
 
-h1.wp-block-post-title {
-  @apply text-4xl font-bold;
+h1.wp-block-post-title, .mce-content-body h1 {
+  @apply text-4xl font-bold text text-slate-700 ;
+}
+h2.wp-block-post-title {
+  @apply text-3xl font-bold;
+}
+h3.wp-block-post-title {
+  @apply text-2xl font-bold;
+}
+h4.wp-block-post-title {
+  @apply text-xl font-bold;
 }
 
 .acf-innerblocks-container {

@@ -10,14 +10,17 @@
 
       <h1 class="article-h1">{{ post.title }}</h1>
       {# <h2 class="article-h2">{{ post.meta('subtitle') }}</h2> #}
-
-      <div class="flex">{{ post.video }}</div>
-      <p>{{ post.content }}</p>
+      <div class="flex flex-row">
+        <div>{{ post.video }}</div>
+        <div class="flex-grow">{{ post.meta('content') }}</div>
+      </div>
     </section>
     <section>
-      <p class="article-author">
+      <hr />
+      <p class="article-author text-harvest-700">
         <span>By</span> {{ post.author }} <span>&bull;</span> {{ post.date }}
       </p>
+      <hr />
     </section>
   </article>
 {% endblock %}
