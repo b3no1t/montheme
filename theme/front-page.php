@@ -12,6 +12,7 @@
  * @subpackage Timberland
  * @since Timberland 1.2.0
  */
+use Timber\Timber;
 
 $context = Timber::context();
 
@@ -30,7 +31,8 @@ $context['poissons'] = Timber::get_posts([
 ]);
 
 $context['musics'] = Timber::get_posts([
-    'post_type' => 'music'
+    'post_type' => 'music',
+    'order'=>'DESC'
 ]);
 
 

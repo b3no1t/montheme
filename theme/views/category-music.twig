@@ -6,6 +6,7 @@
       <div class="flex flex-row">
         {% for item in music_big_item %}
           {% set image = get_image(item.cover) %}
+
           <a href="{{ item.link }}" class="flex items-end w-2/3 p-8 contain big-item bg-chelsea-600 min-h-64" style="background-position-y: bottom;background-image: url( {{ image.src }} );">
             <div class="caroussel__content">
               <h2>{{ item.title }}</h2>
@@ -13,6 +14,7 @@
             </div>
           </a>
         {% endfor %}
+
         <div class="w-1/3 bg-chelsea-200 min-h-[350px]">
           <ol class="flex flex-col h-full small-item__list">
             {% for item in music_small_item %}
