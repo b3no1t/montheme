@@ -32,10 +32,10 @@ $context['poissons'] = Timber::get_posts([
 
 $context['musics'] = Timber::get_posts([
     'post_type' => 'music',
-    'order'=>'DESC'
+    'order'=>'DESC',
 ]);
 
-
+// Pour attacher la nav (menu_primary dans wordpress) a la page
 $context['menu'] = Timber::get_menu('menu_primary');
 
 //rendu de la page

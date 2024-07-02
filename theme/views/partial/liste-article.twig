@@ -1,7 +1,7 @@
 <li class="article__list-item">
   <a href="{{ item.link }}" title="{{ item.title }}" class="hover:sepia">
     <div class="card">
-      <img src="{{ get_image(item.meta('cover')).src }}" alt="{{ item.title }}" class="min-w-[250px] max-w-[400px] h-96" />
+      <img src="{{ get_image(item.meta('cover')).src }}" alt="{{ item.title }}" class="object-cover min-w-8 max-h-96" />
       <div class="card__container">
         <h4><b>{{ item.meta('title') }}</b></h4>
         {# <p>{{ item.meta('content') }}</p> #}

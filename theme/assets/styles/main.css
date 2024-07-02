@@ -7,8 +7,23 @@ body.admin-bar {
     max-height: calc(100vh - 32px);
 }
 .article__list{
-  @apply flex gap-2;
+  @apply grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4;
 }
-  .article__list-item{
+  /* .article__list-item{
     @apply bg-chelsea-600
-  }
+  } */
+/*
+Button B.E.M notation
+*/
+.button__link{
+@apply p-8 transition-colors rounded-sm bg-mountain-400 text-harvest-300 hover:bg-mountain-100 hover:text-mountain-800 dark:text-harvest-950 dark:bg-mountain-700;
+}
+.button__link--is-active{
+  @apply text-french-rose-200;
+}
+/* .article__list-item{
+  @apply text-xl;
+} */
+
+
+

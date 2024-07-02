@@ -6,12 +6,11 @@
   <div class="my-16 wrapper">
     <div class="container px-12 mx-auto mt-4">
       <div class="flex flex-row">
-        <h2>Liste des articles au sujet de la musique</h2>
-
-        <a href="#" class="p-8 transition-colors rounded-sm bg-mountain-400 text-harvest-300 hover:bg-mountain-100 hover:text-mountain-800 dark:text-harvest-950 dark:bg-mountain-700">ALL MUSICS</a>
+        <h2 class="text-3xl font-semibold text-mountain-50">Liste des articles au sujet de la musique</h2>
+        <a href="#" class="button__link button__link--is-active">ALL MUSICS</a>
       </div>
 
-      <ul class="flex flex-row flex-wrap article__list">
+      <ul class="article__list">
         {% for item in musics %}
           {% include './partial/liste-article.twig' %}
         {% endfor %}
