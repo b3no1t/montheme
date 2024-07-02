@@ -16,7 +16,7 @@ body.admin-bar {
 Button B.E.M notation
 */
 .button__link{
-@apply p-8 transition-colors rounded-sm bg-mountain-400 text-harvest-300 hover:bg-mountain-100 hover:text-mountain-800 dark:text-harvest-950 dark:bg-mountain-700;
+@apply p-8 transition-colors rounded-sm bg-mountain-400 text-harvest-300 hover:bg-mountain-100 hover:text-mountain-800 ;
 }
 .button__link--is-active{
   @apply text-french-rose-200;
