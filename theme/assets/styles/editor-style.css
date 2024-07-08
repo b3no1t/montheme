@@ -20,7 +20,7 @@ body {
 }
 
 h1.wp-block-post-title, .mce-content-body h1 {
-  @apply text-4xl font-bold text text-slate-700 ;
+  @apply text-4xl font-bold ;
 }
 h2.wp-block-post-title {
   @apply text-3xl font-bold;
