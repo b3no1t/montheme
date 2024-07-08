@@ -1,8 +1,11 @@
 <div class="flex items-center justify-center">
     <div x-data="gallery()">
         <div class="grid grid-cols-4 grid-rows-5 gap-2 px-6 mx-auto mt-6 min-w-2xl  min-w-[100vw]">
+
         {% set images = post.meta('gallery') %}
+
         {% for image in images %}
+
             <a x-on:click.prevent="open"
                class="relative block w-full bg-red-100 min-h-24"
                href="{{ get_image(image).src }}"
