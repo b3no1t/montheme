@@ -1,11 +1,11 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
-@import "theme";
+@import "theme.css";
 @import "tailwindcss/utilities";
 
-body.admin-bar {
+/* body.admin-bar {
     max-height: calc(100vh - 32px);
-}
+} */
 .article__list{
   @apply grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4;
 }

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html {{ site.language_attributes }}>
 {% block html_head_container %}
-
 {% include './partial/html-header.twig' %}
     {% block head %}
     {% endblock %}
@@ -10,7 +9,7 @@
   <body class="{{ body_class }}" data-template="base.twig">
     <div class="wrapper">
       <div class="container mx-auto">
-        {% include 'menu.twig' %}
+        {% include './partial/navbar.twig' %}
       </div>
     </div>
     <main>
