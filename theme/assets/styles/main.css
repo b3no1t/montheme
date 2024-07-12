@@ -1,6 +1,6 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
-@import "theme.css";
+@import "theme";
 @import "tailwindcss/utilities";
 
 /* body.admin-bar {
@@ -16,10 +16,10 @@
 Button B.E.M notation
 */
 .button__link{
-@apply p-8 transition-colors rounded-sm bg-mountain-400 text-harvest-300 hover:bg-mountain-100 hover:text-mountain-800 ;
+@apply p-8 transition-colors rounded-sm bg-chelsea-400 text-chelsea-700 hover:bg-chelsea-500 hover:text-chelsea-300 ;
 }
 .button__link--is-active{
-  @apply text-french-rose-200;
+  @apply text-chelsea-200;
 }
 /* .article__list-item{
   @apply text-xl;
